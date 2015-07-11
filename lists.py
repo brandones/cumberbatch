@@ -9,6 +9,7 @@ firstnames = (
     "Bakery",
     "Bandersnatch",
     "Bandicoot",
+    "Bandydoo",
     "Barister",
     "Barnoldswick",
     "Baseballbat",
@@ -115,6 +116,7 @@ lastnames = (
     "Collywog",
     "Colonist",
     "Commonwealth",
+    "Combaba",
     "Concubine",
     "Copperwire",
     "Cottagecheese",
@@ -167,6 +169,7 @@ lastnames_unclean = (
     "Coochierash",
     "Crackerdong",
     "Cumbercooch",
+    "Cuntersnatch",
     "Curdledong"
 )
 
