@@ -1,5 +1,5 @@
 cumberbatch
-###########
+===========
 
 Generates names similar to "Benedict Cumberbatch"
 
@@ -9,176 +9,24 @@ All three have an optional parameter "clean" which defaults true.
 (though most of them still will be, as in the use below).
 
 Usage
-*****
+-----
 
 ::
-    >>> from cumberbatch import benedictimport benedict
-    >>> benedict.first()
+
+    >>> import cumberbatch
+    >>> cumberbatch.first()
     'Boilerdang'
-    >>> benedict.last()
+    >>> cumberbatch.last()
     'Cabbagepatch'
-    >>> benedict.full()
+    >>> cumberbatch.full()
     'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
+    >>> cumberbatch.full(clean=False)
     'Barister Colonist'
 
-
-
-    >>> from cumberbatch import benedictimport benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> from cumberbatch import benedict
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> from cumberbatch import benedict
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> from cumberbatch import benedict
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> from cumberbatch import benedict
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> 
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> 
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> 
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> 
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-
-import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
-
-
-
-    >>> from cumberbatch import benedict
-    >>> benedict.first()
-    'Boilerdang'
-    >>> benedict.last()
-    'Cabbagepatch'
-    >>> benedict.full()
-    'Bombadil Coggleswort'
-    >>> benedict.full(clean=False)
-    'Barister Colonist'
 
 
 Contributing
-************
+------------
 
 Feel free to fork me and create a pull request at
 https://github.com/brandones/cumberbatch

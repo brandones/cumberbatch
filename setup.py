@@ -15,7 +15,8 @@ def read(*paths):
 setup(
   name = 'cumberbatch',
   packages = ['cumberbatch'], # this must be the same as the name above
-  version = '0.1',
+  version = '0.1.3',
+  license = 'Apache License 2.0',
   description = 'Generate names similar to Benedict Cumberbatch.',
   long_description=(read('README.rst')),
   author = 'Brandon Istenes',

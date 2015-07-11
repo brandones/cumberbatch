@@ -1,10 +1,9 @@
-""" cumberbatch.py
+""" __init__.py.py
 
-    Returns random English names using the content of lists.py.
+    Returns random English names similar to Benedict Cumberbatch.
 """
 
 import random
-
 
 def first(clean=True):
     """ A randomized English first name.
