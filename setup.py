@@ -21,7 +21,7 @@ setup(
   author = 'Brandon Istenes',
   author_email = 'brandonesbox@gmail.com',
   url = 'https://github.com/brandones/cumberbatch',
-  download_url = 'https://github.com/brandones/cumberbatch/tarball/0.1',
+  download_url = 'https://github.com/brandones/cumberbatch/tarball/0.2',
   keywords = ['names', 'testing', 'fixtures', 'generation', 'generator', 'benedict', 'cumberbatch'],
   classifiers = ['Development Status :: 4 - Beta',
                  'License :: OSI Approved :: Apache Software License']
