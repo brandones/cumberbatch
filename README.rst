@@ -12,6 +12,160 @@ Usage
 *****
 
 ::
+    >>> from cumberbatch import benedictimport benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> from cumberbatch import benedictimport benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> from cumberbatch import benedict
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> from cumberbatch import benedict
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> from cumberbatch import benedict
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> from cumberbatch import benedict
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> 
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> 
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> 
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+    >>> 
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
+
+import benedict
+    >>> benedict.first()
+    'Boilerdang'
+    >>> benedict.last()
+    'Cabbagepatch'
+    >>> benedict.full()
+    'Bombadil Coggleswort'
+    >>> benedict.full(clean=False)
+    'Barister Colonist'
+
+
+
     >>> from cumberbatch import benedict
     >>> benedict.first()
     'Boilerdang'
