@@ -3,8 +3,9 @@
     Unit tests for cumberbatch
 """
 
-import unittest
 import cumberbatch
+import logging
+import unittest
 
 class TestCumberbatch(unittest.TestCase):
 
@@ -62,3 +63,14 @@ class TestCumberbatch(unittest.TestCase):
                 break
         self.assertTrue(found_full_dirty_part)
         self.assertTrue(found_full)
+
+    def test_firstname_startswith_b_or_lastname_startswith_c(self):
+        for i in range(1000):
+            fullname = cumberbatch.full()
+            (full_first, full_last) = fullname.split(' ')
+            self.assertTrue(full_first.startswith('B') or full_last.startswith('C'))
+
+        for i in range(1000):
+            fullname = cumberbatch.full(clean=False)
+            (full_first, full_last) = fullname.split(' ')
+            self.assertTrue(full_first.startswith('B') or full_last.startswith('C'))
