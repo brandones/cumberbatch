@@ -30,9 +30,12 @@ class TestCumberbatch(unittest.TestCase):
 
             fullname = cumberbatch.full()
             self.assertNotIn(fullname, cumberbatch.Lists.fullnames_unclean)
-            (full_first, full_last) = fullname.split(' ')
-            self.assertNotIn(full_first, cumberbatch.Lists.firstnames_unclean)
-            self.assertNotIn(full_last, cumberbatch.Lists.lastnames_unclean)
+            try:
+                (full_first, full_last) = fullname.split(' ')
+                self.assertNotIn(full_first, cumberbatch.Lists.firstnames_unclean)
+                self.assertNotIn(full_last, cumberbatch.Lists.lastnames_unclean)
+            except ValueError, e:
+                raise ValueError(fullname)
 
     def test_clean_false_produces_dirty_words(self):
         found_first = False
@@ -53,24 +56,33 @@ class TestCumberbatch(unittest.TestCase):
         found_full = False
         for i in range(100000):
             fullname = cumberbatch.full(clean=False)
-            (full_first, full_last) = fullname.split(' ')
-            if not found_full_dirty_part:
-                found_full_dirty_part = (full_first in cumberbatch.Lists.firstnames_unclean or
-                                         full_last in cumberbatch.Lists.lastnames_unclean)
-            if not found_full:
-                found_full = fullname in cumberbatch.Lists.fullnames_unclean
-            if found_full_dirty_part and found_full:
-                break
+            try:
+                (full_first, full_last) = fullname.split(' ')
+                if not found_full_dirty_part:
+                    found_full_dirty_part = (full_first in cumberbatch.Lists.firstnames_unclean or
+                                             full_last in cumberbatch.Lists.lastnames_unclean)
+                if not found_full:
+                    found_full = fullname in cumberbatch.Lists.fullnames_unclean
+                if found_full_dirty_part and found_full:
+                    break
+            except ValueError, e:
+                raise ValueError(fullname)
         self.assertTrue(found_full_dirty_part)
         self.assertTrue(found_full)
 
     def test_firstname_startswith_b_or_lastname_startswith_c(self):
         for i in range(1000):
             fullname = cumberbatch.full()
-            (full_first, full_last) = fullname.split(' ')
-            self.assertTrue(full_first.startswith('B') or full_last.startswith('C'))
+            try:
+                (full_first, full_last) = fullname.split(' ')
+                self.assertTrue(full_first.startswith('B') or full_last.startswith('C'))
+            except ValueError, e:
+                raise ValueError(fullname)
 
         for i in range(1000):
             fullname = cumberbatch.full(clean=False)
-            (full_first, full_last) = fullname.split(' ')
-            self.assertTrue(full_first.startswith('B') or full_last.startswith('C'))
+            try:
+                (full_first, full_last) = fullname.split(' ')
+                self.assertTrue(full_first.startswith('B') or full_last.startswith('C'))
+            except ValueError, e:
+                raise ValueError(fullname)
