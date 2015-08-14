@@ -14,15 +14,15 @@ def read(*paths):
 
 setup(
   name = 'cumberbatch',
-  packages = ['cumberbatch'], # this must be the same as the name above
-  version = '0.3',
+  packages = ['cumberbatch'],
+  version = '0.4',
   license = 'Apache License 2.0',
   description = 'Generate names similar to Benedict Cumberbatch.',
   long_description=(read('README.rst')),
   author = 'Brandon Istenes',
   author_email = 'brandonesbox@gmail.com',
   url = 'https://github.com/brandones/cumberbatch',
-  download_url = 'https://github.com/brandones/cumberbatch/tarball/0.3',
+  download_url = 'https://github.com/brandones/cumberbatch/tarball/0.4',
   keywords = ['names', 'testing', 'fixtures', 'generation', 'generator', 'benedict', 'cumberbatch'],
   classifiers = ['Development Status :: 4 - Beta',
                  'License :: OSI Approved :: Apache Software License']
