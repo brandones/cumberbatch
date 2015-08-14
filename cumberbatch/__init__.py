@@ -9,20 +9,14 @@ def first(clean=True):
     """ A randomized English first name.
     :param clean: If false, returns some names your boss may find objectionable
     """
-    if clean:
-        return random.choice(Lists.firstnames)
-    else:
-        return random.choice(Lists.firstnames + Lists.firstnames_unclean)
+    return random.choice(Lists.firstnames[clean])
 
 
 def last(clean=True):
     """ A randomized English last name.
     :param clean: If false, returns some names your boss may find objectionable
     """
-    if clean:
-        return random.choice(Lists.lastnames)
-    else:
-        return random.choice(Lists.lastnames + Lists.lastnames_unclean)
+    return random.choice(Lists.lastnames[clean])
 
 
 def full(clean=True):
@@ -30,34 +24,47 @@ def full(clean=True):
     :param clean: If false, returns some names your boss may find objectionable
     """
     # Roll to see if we should just pick a full name
-    # This probability is equal to the probability of any other full
-    # name being composed.
-
-    if clean:
-        num_name_combos = len(Lists.firstnames) * len(Lists.lastnames)
-        num_full_names = len(Lists.fullnames)
-    else:
-        num_name_combos = ((len(Lists.firstnames) + len(Lists.firstnames_unclean)) *
-                           (len(Lists.lastnames_unclean) + len(Lists.lastnames_unclean)))
-        num_full_names = len(Lists.fullnames) + len(Lists.fullnames_unclean)
-
-    p_arbitrary_pair = 1 / num_name_combos
-    p_full_name = p_arbitrary_pair * num_full_names
-    if random.random() < p_full_name:
-        if clean:
-            return random.choice(Lists.fullnames)
-        else:
-            return random.choice(Lists.fullnames + Lists.fullnames_unclean)
+    if __pick_fullname_from_list(clean):
+        return random.choice(Lists.fullnames[clean])
 
     # We didn't select a full name, so let's compose a random name
-    if clean:
-        firstname = random.choice(Lists.firstnames)
-        lastname = random.choice(Lists.lastnames)
-    else:
-        firstname = random.choice(Lists.firstnames + Lists.firstnames_unclean)
-        lastname = random.choice(Lists.lastnames + Lists.lastnames_unclean)
+    return __compose_name(clean)
 
-    return '{} {}'.format(firstname, lastname)
+
+__p_full_name = {}  # a dict indexed by the boolean 'clean'
+def __pick_fullname_from_list(clean):
+    """ Flip a coin to choose between fullnames list and composing one
+
+    The probability of choosing a fullname is equal to the probability
+    of any other full name being composed.
+
+    Stores the calculated probability in __p_full_name_*
+
+    :param clean: Whether to use the lengths of the _clean or _all lists
+    :return: boolean
+    """
+    if clean not in __p_full_name:
+        num_name_combos = len(Lists.firstnames[clean]) * len(Lists.lastnames[clean])
+        num_full_names = len(Lists.fullnames[clean])
+        p_arbitrary_pair = 1 / num_name_combos
+        __p_full_name[clean] = p_arbitrary_pair * num_full_names
+    return random.random() < __p_full_name[clean]
+
+
+def __compose_name(clean):
+    """
+    :param clean: Whether to use the lengths of the _clean or _all lists
+    :return: str -- a full name.
+    """
+    firstname = random.choice(Lists.firstnames[clean])
+    lastname = random.choice(Lists.lastnames[clean])
+
+    # If the name has neither a first name starting with a B nor a
+    # last name starting with a C, re-roll.
+    if not firstname.startswith('B') and not lastname.startswith('C'):
+        return __compose_name(clean)
+    else:
+        return '{} {}'.format(firstname, lastname)
 
 
 class Lists(object):
@@ -65,7 +72,7 @@ class Lists(object):
         http://benedictcumberbatchgenerator.tumblr.com/
     """
 
-    firstnames = (
+    firstnames_clean = (
         "Anglerfish",
         "Bakery",
         "Bandersnatch",
@@ -90,7 +97,6 @@ class Lists(object):
         "Blubberwhale",
         "Bodybuild",
         "Boilerdang",
-        "Bombadil",
         "Bombadil",
         "Bonaparte",
         "Boobytrap",
@@ -148,7 +154,7 @@ class Lists(object):
         "Syphilis"
     )
 
-    lastnames = (
+    lastnames_clean = (
         "Ampersand",
         "Animorph",
         "Banglesnatch",
@@ -178,18 +184,15 @@ class Lists(object):
         "Colonist",
         "Commonwealth",
         "Combaba",
-        "Concubine",
         "Copperwire",
         "Cottagecheese",
         "Countryside",
-        "Covergirl",
         "Crackerjack",
         "Crackersprout",
         "Cragglethatch",
         "Creamsicle",
         "Crimpysnitch",
         "Crucifix",
-        "Crumplebutt",
         "Crumplehorn",
         "Crumplesack",
         "Cuckatoo",
@@ -207,7 +210,6 @@ class Lists(object):
         "Frumblesnatch",
         "Humperdinck",
         "Kryptonite",
-        "Lingerie",
         "Moldyspore",
         "Nottinghill",
         "Oxfordshire",
@@ -216,7 +218,6 @@ class Lists(object):
         "Snickersbar",
         "Snugglesnatch",
         "Splishnsplash",
-        "Stinkyrash",
         "Talisman",
         "Toodlesnoot",
         "Upperclass",
@@ -227,14 +228,19 @@ class Lists(object):
     lastnames_unclean = (
         "Cameltoe",
         "Cockletit",
+        "Concubine",
         "Coochierash",
+        "Covergirl",
         "Crackerdong",
+        "Crumplebutt",
         "Cumbercooch",
         "Cuntersnatch",
-        "Curdledong"
+        "Curdledong",
+        "Lingerie",
+        "Stinkyrash"
     )
 
-    fullnames = (
+    fullnames_clean = (
         "Benadryl Claritin",
         "Benedict Timothy Carlton Cumberbatch",
         "Biblical Concubine",
@@ -251,3 +257,23 @@ class Lists(object):
         "Syphilis Cankersore",
         "Wanda's Crotchfruit"
     )
+
+    firstnames_all = firstnames_clean + firstnames_unclean
+    lastnames_all = lastnames_clean + lastnames_unclean
+    fullnames_all = fullnames_clean + fullnames_unclean
+
+    # Store these things in a dict indexed by the boolean variable 'clean'
+    firstnames = {
+        True: firstnames_clean,
+        False: firstnames_all
+    }
+
+    lastnames = {
+        True: lastnames_clean,
+        False: lastnames_all
+    }
+
+    fullnames = {
+        True: fullnames_clean,
+        False: fullnames_all
+    }
