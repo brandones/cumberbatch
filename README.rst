@@ -23,6 +23,16 @@ Usage
     >>> cumberbatch.full(clean=False)
     'Barister Colonist'
 
+or from the command-line::
+
+    $ python -m cumberbatch --first
+    Bandydoo
+    $ python -m cumberbatch --last
+    Snickersbar
+    $ python -m cumberbatch
+    Bumbleshack Cottagecheese
+    $ python -m cumberbatch --nsfw
+    Blenderdick Countryside
 
 
 Contributing
