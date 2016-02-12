@@ -93,7 +93,6 @@ class Lists(object):
         "Benetton",
         "Benjamin",
         "Bentobox",
-        "Bentobox",
         "Billiardball",
         "Billyray",
         "Blasphemy",
@@ -102,6 +101,7 @@ class Lists(object):
         "Boilerdang",
         "Bombadil",
         "Bonaparte",
+        "Bonnydoon",
         "Boobytrap",
         "Bouillabaisse",
         "Bourgeoisie",
@@ -129,6 +129,7 @@ class Lists(object):
         "Buttermilk",
         "Cogglesnatch",
         "Congleton",
+        "Shenanigans",
         "Danglerack",
         "Fragglerock",
         "Honkytonk",
@@ -156,6 +157,7 @@ class Lists(object):
         "Blubberbutt",
         "Blubberdick",
         "Bukkake",
+        "Bumblefuck",
         "Syphilis"
     )
 
@@ -184,6 +186,7 @@ class Lists(object):
         "Clavichord",
         "Clombyclomp",
         "Coddleswort",
+        "Coelacanth",
         "Coggleswort",
         "Collywog",
         "Colonist",
@@ -258,6 +261,7 @@ class Lists(object):
         "Buckminster Fullerene",
         "Butawhiteboy Cantbekhan",
         "Eggsbenedict Breakfastbatch",
+        "Frumtuous Bandersnatch",
         "Rinkydink Curdlesnoot",
         "Wanda's Son",
         "Wimbledon Tennismatch"
