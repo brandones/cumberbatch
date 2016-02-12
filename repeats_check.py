@@ -1,6 +1,9 @@
-""" repeats_check.py
-
-    Copyright 2015 Socos LLC
+# repeats_check.py
+#
+"""
+A little script to check how many names one can expect to get without
+hitting repeats. Obviously this could be done using math, but
+(unsatisfying excuses here).
 """
 
 import cumberbatch

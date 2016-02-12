@@ -1,6 +1,7 @@
-""" __init__.py.py
-
-    Returns random English names similar to Benedict Cumberbatch.
+# __init__.py.py
+#
+"""
+Generates random English names similar to Benedict Cumberbatch.
 """
 
 import random

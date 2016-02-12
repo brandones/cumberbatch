@@ -1,7 +1,5 @@
-""" setup.py
-
-    Copyright 2015 Socos LLC
-"""
+# setup.py
+#
 
 import os
 
@@ -15,14 +13,14 @@ def read(*paths):
 setup(
   name = 'cumberbatch',
   packages = ['cumberbatch'],
-  version = '0.4',
+  version = '0.5',
   license = 'Apache License 2.0',
   description = 'Generate names similar to Benedict Cumberbatch.',
   long_description=(read('README.rst')),
   author = 'Brandon Istenes',
   author_email = 'brandonesbox@gmail.com',
   url = 'https://github.com/brandones/cumberbatch',
-  download_url = 'https://github.com/brandones/cumberbatch/tarball/0.4',
+  download_url = 'https://github.com/brandones/cumberbatch/tarball/0.5',
   keywords = ['names', 'testing', 'fixtures', 'generation', 'generator', 'benedict', 'cumberbatch'],
   classifiers = ['Development Status :: 4 - Beta',
                  'License :: OSI Approved :: Apache Software License']
